@@ -5,9 +5,30 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
+    <% @team_information.each do |position, player| %>
+        <% if position == "name" %>
+        <h1>Team Name: <%= player.to_s %></h1>
+        
+        <% elsif position == "coach"%>
+        <h2>Coach: <%= player.to_s %></h2>
 
+        <% elsif position == "pg"%>
+        <h2>Point Guard: <%= player.to_s %></h2>
+        
+        <% elsif position == "sg"%>
+        <h2>Shooting Guard: <%= player.to_s %></h2>
 
+        <% elsif position == "pf"%>
+        <h2>Power Forward: <%= player.to_s %></h2>
+
+        <% elsif position == "sf"%>
+        <h2>Small Forward: <%= player.to_s %></h2>
+
+        <% elsif position == "c"%>
+        <h2>Center: <%= player.to_s %></h2>
+
+        <% end %>   
+        <% end %>        
  </body>
 </html>
 
